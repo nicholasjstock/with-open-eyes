@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>{{ site.data.content.en.page_title }}</title>
+<meta name="description" content="{{ site.data.content.en.page_description }}" />
+<link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}" />
+</head>
+<body>
+
+<header class="bar">
+  <div class="bar__title">
+    <span lang="fr">{{ site.data.content.fr.title }}</span>
+    <span lang="en">{{ site.data.content.en.title }}</span>
+  </div>
+  <nav class="bar__lang" aria-label="{{ site.data.content.en.language_menu }}">
+    <button type="button" data-set-lang="fr" aria-label="{{ site.data.content.fr.language_name }}">FR</button>
+    <span aria-hidden="true">·</span>
+    <button type="button" data-set-lang="en" aria-label="{{ site.data.content.en.language_name }}">EN</button>
+  </nav>
+</header>
+
+<main class="wrap">
+{{ content }}
+</main>
+
+<script>
+(function () {
+  var root = document.documentElement;
+  var translations = {
+    fr: {
+      title: {{ site.data.content.fr.page_title | jsonify }},
+      description: {{ site.data.content.fr.page_description | jsonify }},
+      languageMenu: {{ site.data.content.fr.language_menu | jsonify }}
+    },
+    en: {
+      title: {{ site.data.content.en.page_title | jsonify }},
+      description: {{ site.data.content.en.page_description | jsonify }},
+      languageMenu: {{ site.data.content.en.language_menu | jsonify }}
+    }
+  };
+
+  function apply(l) {
+    root.setAttribute('data-lang', l);
+    root.setAttribute('lang', l);
+    document.title = translations[l].title;
+    document.querySelector('meta[name="description"]').setAttribute('content', translations[l].description);
+    document.querySelector('.bar__lang').setAttribute('aria-label', translations[l].languageMenu);
+
+    var localized = document.querySelectorAll('[lang="fr"], [lang="en"]');
+    for (var j = 0; j < localized.length; j++) {
+      localized[j].hidden = localized[j].getAttribute('lang') !== l;
+    }
+
+    var localizedImages = document.querySelectorAll('[data-alt-fr][data-alt-en]');
+    for (var k = 0; k < localizedImages.length; k++) {
+      localizedImages[k].setAttribute('alt', localizedImages[k].getAttribute('data-alt-' + l));
+    }
+
+    var btns = document.querySelectorAll('[data-set-lang]');
+    for (var i = 0; i < btns.length; i++) {
+      btns[i].setAttribute('aria-current', btns[i].dataset.setLang === l ? 'true' : 'false');
+    }
+  }
+  var saved = null;
+  try { saved = localStorage.getItem('lyo-lang'); } catch (e) {}
+  apply(saved === 'en' || saved === 'fr' ? saved : 'en');
+  document.addEventListener('click', function (e) {
+    var b = e.target.closest('[data-set-lang]');
+    if (!b) return;
+    apply(b.dataset.setLang);
+    try { localStorage.setItem('lyo-lang', b.dataset.setLang); } catch (e2) {}
+  });
+})();
+</script>
+
+</body>
+</html>

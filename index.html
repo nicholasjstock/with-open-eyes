@@ -1,0 +1,92 @@
+---
+layout: default
+---
+{% assign fr = site.data.content.fr %}
+{% assign en = site.data.content.en %}
+
+<section class="s s--title">
+  <div class="cover">
+    <img src="{{ '/assets/img/cover-front.png' | relative_url }}" alt="{{ fr.title }}" data-alt-fr="{{ fr.title }}" data-alt-en="{{ en.title }}" />
+  </div>
+  <div class="title">
+    <h1><span lang="fr">{{ fr.title }}</span><span lang="en">{{ en.title }}</span></h1>
+    <p class="title__sub" lang="fr">{{ fr.subtitle }}</p>
+    <p class="title__sub" lang="en">{{ en.subtitle }}</p>
+    <p class="title__authors"><span>Jeremy Stigter</span><span class="dim">Nicolas Lebourg</span></p>
+    <p class="title__release dim" lang="fr">{{ fr.release }}</p>
+    <p class="title__release dim" lang="en">{{ en.release }}</p>
+  </div>
+</section>
+
+<section class="s s--text">
+  <p class="eyebrow">01 — <span lang="fr">{{ fr.nav_book }}</span><span lang="en">{{ en.nav_book }}</span></p>
+  <div class="prose" lang="fr">
+    <p class="lead">{{ fr.lead }}</p>
+    {% for p in fr.body %}<p>{{ p }}</p>{% endfor %}
+  </div>
+  <div class="prose" lang="en">
+    <p class="lead">{{ en.lead }}</p>
+    {% for p in en.body %}<p>{{ p }}</p>{% endfor %}
+  </div>
+</section>
+
+<section class="s s--plate">
+  <img src="{{ '/assets/img/stigter-portrait.jpeg' | relative_url }}" alt="Jeremy Stigter" />
+</section>
+
+<section class="s">
+  <p class="eyebrow"><span lang="fr">{{ fr.nav_photos }}</span><span lang="en">{{ en.nav_photos }}</span></p>
+  <div class="grid grid--three">
+    <figure><img src="{{ '/assets/img/lepen-1.png' | relative_url }}" alt="Jean-Marie Le Pen" /><figcaption>Jean-Marie Le Pen</figcaption></figure>
+    <figure><img src="{{ '/assets/img/lepen-2.png' | relative_url }}" alt="Marine Le Pen" /><figcaption>Marine Le Pen</figcaption></figure>
+    <figure><img src="{{ '/assets/img/lepen-3.png' | relative_url }}" alt="Marion Maréchal-Le Pen" /><figcaption>Marion Maréchal-Le Pen</figcaption></figure>
+  </div>
+</section>
+
+<section class="s">
+  <p class="eyebrow">02 — <span lang="fr">{{ fr.nav_photographer }}</span><span lang="en">{{ en.nav_photographer }}</span></p>
+  <div class="prose prose--small" lang="fr"><p>{{ fr.bio }}</p></div>
+  <div class="prose prose--small" lang="en"><p>{{ en.bio }}</p></div>
+  <div class="grid grid--books">
+    <figure>
+      <img src="{{ '/assets/img/book-jewishbride.jpg' | relative_url }}" alt="The Jewish Bride" />
+      <figcaption>The Jewish Bride · Nazraeli Press, 2008</figcaption>
+    </figure>
+    <figure>
+      <img src="{{ '/assets/img/book-vivre.png' | relative_url }}" alt="Vivre" />
+      <figcaption>Vivre · Le Seuil, 2012</figcaption>
+    </figure>
+    <figure class="pair">
+      <img src="{{ '/assets/img/jane-goodall.png' | relative_url }}" alt="Jane Goodall" />
+      <img src="{{ '/assets/img/book-savoir.jpg' | relative_url }}" alt="Savoir, Penser, Rêver" />
+      <figcaption>Jane Goodall · Savoir, Penser, Rêver · Flammarion, 2018</figcaption>
+    </figure>
+    <figure>
+      <img src="{{ '/assets/img/book-ueda.jpg' | relative_url }}" alt="Visiting Mister Ueda" />
+      <figcaption>Visiting Mister Ueda · Zen Foto Gallery, 2021</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="s">
+  <p class="eyebrow">03 — <span lang="fr">{{ fr.nav_specs }}</span><span lang="en">{{ en.nav_specs }}</span></p>
+  <div class="specs">
+    <dl lang="fr">{% for row in fr.specs %}<dt>{{ row.k }}</dt><dd>{{ row.v }}</dd>{% endfor %}</dl>
+    <dl lang="en">{% for row in en.specs %}<dt>{{ row.k }}</dt><dd>{{ row.v }}</dd>{% endfor %}</dl>
+    <div class="order">
+      <a class="btn" href="{{ site.data.content.order_url }}" target="_blank" rel="noopener">
+        <span lang="fr">{{ fr.order }}</span><span lang="en">{{ en.order }}</span>
+      </a>
+      <p class="note"><span lang="fr">{{ fr.order_note }}</span><span lang="en">{{ en.order_note }}</span></p>
+    </div>
+  </div>
+</section>
+
+<section class="s s--last">
+  <p class="eyebrow">04 — Contact</p>
+  <p class="contact">
+    <a href="mailto:{{ site.data.content.email }}">{{ site.data.content.email }}</a>
+    <span class="dim"><span lang="fr">{{ fr.contact_note }}</span><span lang="en">{{ en.contact_note }}</span></span>
+  </p>
+  <p class="credits"><span>© Jeremy Stigter</span><span>Lecturis</span><span>République Studio</span></p>
+</section>
