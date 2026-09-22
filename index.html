@@ -9,10 +9,14 @@ layout: default
     <img src="{{ '/assets/img/cover-front.png' | relative_url }}" alt="{{ fr.title }}" data-alt-fr="{{ fr.title }}" data-alt-en="{{ en.title }}" />
   </div>
   <div class="title">
+    <p class="title__presents"><span lang="fr">{{ fr.presents }}</span><span lang="en">{{ en.presents }}</span></p>
     <h1><span lang="fr">{{ fr.title }}</span><span lang="en">{{ en.title }}</span></h1>
     <p class="title__sub" lang="fr">{{ fr.subtitle }}</p>
     <p class="title__sub" lang="en">{{ en.subtitle }}</p>
-    <p class="title__authors"><span>Jeremy Stigter</span><span class="dim">Nicolas Lebourg</span></p>
+    <p class="title__authors">
+      <span><span class="dim" lang="fr">{{ fr.credit_photographs }}</span><span class="dim" lang="en">{{ en.credit_photographs }}</span> Jeremy Stigter</span>
+      <span><span class="dim" lang="fr">{{ fr.credit_essay }}</span><span class="dim" lang="en">{{ en.credit_essay }}</span> Nicolas Lebourg</span>
+    </p>
     <p class="title__release dim" lang="fr">{{ fr.release }}</p>
     <p class="title__release dim" lang="en">{{ en.release }}</p>
   </div>
@@ -47,6 +51,7 @@ layout: default
   <p class="eyebrow">02 — <span lang="fr">{{ fr.nav_photographer }}</span><span lang="en">{{ en.nav_photographer }}</span></p>
   <div class="prose prose--small" lang="fr"><p>{{ fr.bio }}</p></div>
   <div class="prose prose--small" lang="en"><p>{{ en.bio }}</p></div>
+  <p class="subhead"><span lang="fr">{{ fr.nav_other_books }}</span><span lang="en">{{ en.nav_other_books }}</span></p>
   <div class="grid grid--books">
     <figure>
       <img src="{{ '/assets/img/book-jewishbride.jpg' | relative_url }}" alt="The Jewish Bride" />

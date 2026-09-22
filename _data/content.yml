@@ -1,3 +1,4 @@
+site_name: Jeremy Stigter
 order_url: https://lecturis.nl
 email: studio@jeremystigter.com
 
@@ -6,13 +7,19 @@ fr:
   title: Les Yeux Ouverts
   language_menu: Choix de la langue
   language_name: Français
-  page_title: Les Yeux Ouverts — Jeremy Stigter
-  page_description: Trois épisodes dans l'histoire du Front national — Jeremy Stigter
+  page_title: Jeremy Stigter — Les Yeux Ouverts
+  page_description: >-
+    Jeremy Stigter, photographe, Paris. Actuellement : Les Yeux Ouverts, trois
+    épisodes dans l'histoire du Front national.
+  presents: Jeremy Stigter présente
+  credit_photographs: Photographies
+  credit_essay: Essai
   subtitle: Trois épisodes dans l'histoire du Front national
   release: "Date de sortie : Août 20, 2026"
   nav_book: Le livre
   nav_photos: Photographies
-  nav_photographer: Le photographe
+  nav_photographer: Jeremy Stigter
+  nav_other_books: Autres livres
   nav_specs: Le livre en détail
   nav_contact: Contact
   order: Commander le livre
@@ -77,13 +84,19 @@ en:
   title: Eyes Wide Open
   language_menu: Language selection
   language_name: English
-  page_title: Eyes Wide Open — Jeremy Stigter
-  page_description: Three episodes in the history of the Front National — Jeremy Stigter
+  page_title: Jeremy Stigter — Eyes Wide Open
+  page_description: >-
+    Jeremy Stigter, photographer, Paris. Currently: Eyes Wide Open, three episodes
+    in the history of the Front National.
+  presents: Jeremy Stigter presents
+  credit_photographs: Photographs
+  credit_essay: Essay
   subtitle: Three episodes in the history of the Front National
   release: "Publication date: August 20, 2026"
   nav_book: The book
   nav_photos: Photographs
-  nav_photographer: The photographer
+  nav_photographer: Jeremy Stigter
+  nav_other_books: Other books
   nav_specs: Specifications
   nav_contact: Contact
   order: Order the book

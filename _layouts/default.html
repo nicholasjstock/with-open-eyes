@@ -5,15 +5,26 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>{{ site.data.content.en.page_title }}</title>
 <meta name="description" content="{{ site.data.content.en.page_description }}" />
+<link rel="canonical" href="{{ page.url | absolute_url }}" />
+<link rel="icon" href="{{ '/assets/favicon.svg' | relative_url }}" type="image/svg+xml" />
+
+<meta property="og:type" content="book" />
+<meta property="og:site_name" content="{{ site.data.content.site_name }}" />
+<meta property="og:title" content="{{ site.data.content.en.page_title }}" />
+<meta property="og:description" content="{{ site.data.content.en.page_description }}" />
+<meta property="og:url" content="{{ page.url | absolute_url }}" />
+<meta property="og:image" content="{{ '/assets/img/cover-front.png' | absolute_url }}" />
+<meta property="og:image:alt" content="{{ site.data.content.en.title }} — {{ site.data.content.en.subtitle }}" />
+<meta property="og:locale" content="en_GB" />
+<meta property="og:locale:alternate" content="fr_FR" />
+<meta name="twitter:card" content="summary_large_image" />
+
 <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}" />
 </head>
 <body>
 
 <header class="bar">
-  <div class="bar__title">
-    <span lang="fr">{{ site.data.content.fr.title }}</span>
-    <span lang="en">{{ site.data.content.en.title }}</span>
-  </div>
+  <a class="bar__title" href="{{ '/' | relative_url }}">{{ site.data.content.site_name }}</a>
   <nav class="bar__lang" aria-label="{{ site.data.content.en.language_menu }}">
     <button type="button" data-set-lang="fr" aria-label="{{ site.data.content.fr.language_name }}">FR</button>
     <span aria-hidden="true">·</span>
