@@ -99,10 +99,14 @@ a.bar__title:hover { color: var(--ink); }
 .grid { display: grid; gap: 24px; }
 .grid--three { grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); }
 .grid--books { grid-template-columns: repeat(auto-fit, minmax(min(100%, 190px), 1fr)); gap: 28px 24px; align-items: end; max-width: 1100px; }
+/* below the breakpoint the covers sit in equal columns, so the tallest is reined in */
+@media (max-width: 859px) { .grid--books .tall img { max-width: 78%; } }
+/* wide enough for one row: size each column to its cover's aspect ratio so all four
+   share a common height — otherwise the one landscape cover always reads as smallest */
+@media (min-width: 860px) { .grid--books { grid-template-columns: 1.333fr 0.889fr 0.664fr 0.896fr; } }
 .grid figure { margin: 0; display: grid; gap: 10px; }
 .grid figcaption { font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--dim); }
 .grid--three figcaption { font-size: 10px; letter-spacing: 0.12em; }
-.grid--books .tall img { max-width: 78%; }
 
 .specs { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 48px; align-items: start; }
 .specs dl { margin: 0; display: grid; grid-template-columns: auto minmax(0, 1fr); column-gap: 28px; row-gap: 11px; font-size: 14px; line-height: 1.4; }
