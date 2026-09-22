@@ -1,6 +1,6 @@
 site_name: Jeremy Stigter
-order_url: https://lecturis.nl
-email: studio@jeremystigter.com
+order_url: https://www.amazon.fr/dp/9462265658
+email: jeremy.stigter@gmail.com
 
 fr:
   lang_label: FR
@@ -23,7 +23,7 @@ fr:
   nav_specs: Le livre en détail
   nav_contact: Contact
   order: Commander le livre
-  order_note: "[ lien vers la boutique de l'éditeur — URL à confirmer ]"
+  order_note: Sur Amazon.fr
   contact_note: Presse, expositions, tirages
   lead: >-
     Ce livre présente un portrait révélateur de l'ascension spectaculaire du Front
@@ -100,7 +100,7 @@ en:
   nav_specs: Specifications
   nav_contact: Contact
   order: Order the book
-  order_note: "[ publisher shop link — URL to confirm ]"
+  order_note: On Amazon.fr
   contact_note: Press, exhibitions, prints
   lead: >-
     This book presents a revealing portrait of the spectacular rise of the Front
