@@ -5,7 +5,7 @@
 ## What this site is
 
 `jeremystigter.com` is Jeremy Stigter's site. The homepage is currently given over
-almost entirely to one book, *Les Yeux Ouverts / Eyes Wide Open* — the header carries
+almost entirely to one book, *Les Yeux Ouverts / With Open Eyes* — the header carries
 the name, and "Jeremy Stigter presents / présente" sits above the book title. When
 there is a next book, that line stays and the title under it changes.
 
