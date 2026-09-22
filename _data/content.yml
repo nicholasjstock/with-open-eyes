@@ -24,6 +24,8 @@ fr:
   nav_contact: Contact
   order: Commander le livre
   order_note: Sur Amazon.fr
+  dedication: Demander un exemplaire dédicacé
+  dedication_subject: Exemplaire dédicacé — Les Yeux Ouverts
   contact_note: Presse, expositions, tirages
   lead: >-
     Ce livre présente un portrait révélateur de l'ascension spectaculaire du Front
@@ -101,6 +103,8 @@ en:
   nav_contact: Contact
   order: Order the book
   order_note: On Amazon.fr
+  dedication: Request a signed copy
+  dedication_subject: Signed copy — With Open Eyes
   contact_note: Press, exhibitions, prints
   lead: >-
     This book presents a revealing portrait of the spectacular rise of the Front

@@ -78,9 +78,13 @@ layout: default
     <dl lang="fr">{% for row in fr.specs %}<dt>{{ row.k }}</dt><dd>{{ row.v }}</dd>{% endfor %}</dl>
     <dl lang="en">{% for row in en.specs %}<dt>{{ row.k }}</dt><dd>{{ row.v }}</dd>{% endfor %}</dl>
     <div class="order">
-      <a class="btn" href="{{ site.data.content.order_url }}" target="_blank" rel="noopener">
-        <span lang="fr">{{ fr.order }}</span><span lang="en">{{ en.order }}</span>
-      </a>
+      <div class="order__actions">
+        <a class="btn" href="{{ site.data.content.order_url }}" target="_blank" rel="noopener">
+          <span lang="fr">{{ fr.order }}</span><span lang="en">{{ en.order }}</span>
+        </a>
+        <a class="btn btn--ghost" lang="fr" href="mailto:{{ site.data.content.email }}?subject={{ fr.dedication_subject | url_encode }}">{{ fr.dedication }}</a>
+        <a class="btn btn--ghost" lang="en" href="mailto:{{ site.data.content.email }}?subject={{ en.dedication_subject | url_encode }}">{{ en.dedication }}</a>
+      </div>
       <p class="note"><span lang="fr">{{ fr.order_note }}</span><span lang="en">{{ en.order_note }}</span></p>
     </div>
   </div>
