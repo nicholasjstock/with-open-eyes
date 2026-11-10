@@ -1,5 +1,11 @@
 site_name: Jeremy Stigter
-order_url: https://www.amazon.fr/dp/9462265658
+order_links:
+  - name: La Petite Lumière
+    url: mailto:commandes@lapetitelumiere.fr
+  - name: Amazon
+    url: https://www.amazon.fr/dp/9462265658
+  - name: Lecturis
+    url: https://lecturis.nl/en/product/with-open-eyes
 email: jeremy.stigter@gmail.com
 
 fr:
@@ -23,7 +29,6 @@ fr:
   nav_specs: Le livre en détail
   nav_contact: Contact
   order: Commander le livre
-  order_note: Sur Amazon.fr
   dedication: Demander un exemplaire dédicacé
   dedication_subject: Exemplaire dédicacé — Les Yeux Ouverts
   contact_note: Presse, expositions, tirages
@@ -102,7 +107,6 @@ en:
   nav_specs: Specifications
   nav_contact: Contact
   order: Order the book
-  order_note: On Amazon.fr
   dedication: Request a signed copy
   dedication_subject: Signed copy — With Open Eyes
   contact_note: Press, exhibitions, prints
